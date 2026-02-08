@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Vision Auto</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/ac82667efe.js" crossorigin="anonymous"></script>
 
     <!-- <style>
         * {
@@ -15,80 +16,182 @@
 </head>
 
 <body class="font-mono">
-    <aside class=" fixed bg-slate-900 w-1/6">
-        <div class="flex h-screen flex-col justify-between border-e border-gray-100">
-            <div class="px-4 py-6">
-                <h1 class="text-white/90 text-2xl font-black tracking-tighter">Vision Auto <span class="text-blue-700 text-3xl">.</span></h1>
-
-                <ul class="mt-6 space-y-1 flex flex-col gap-4">
-                    <li>
-                        <a href="#" class="block rounded-lg bg-blue-900 px-4 py-2 text-sm font-medium text-white">
-                            Dashboard
-                        </a>
-                    </li>
-
-                    <li>
-                        <details class="group [&amp;_summary::-webkit-details-marker]:hidden" open="">
-                            <summary
-                                class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-white hover:bg-blue-900">
-                                <span class="text-sm font-medium"> Analytics </span>
-
-                                <span class="shrink-0 transition duration-300 group-open:-rotate-180">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 20 20"
-                                        fill="currentColor">
-                                        <path fill-rule="evenodd"
-                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                </span>
-                            </summary>
-
-                            <ul class="mt-2 space-y-1 px-4">
-                                <li>
-                                    <a href="#"
-                                        class="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-blue-900">
-                                        Sales Management
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#"
-                                        class="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-blue-900">
-                                        Order Management
-                                    </a>
-                                </li>
-                            </ul>
-                        </details>
-                    </li>
-
-                    <li>
-                        <a href="#"
-                            class="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-blue-900">
-                            Calendar
-                        </a>
-                    </li>
-
-                    
-                </ul>
+    <div class="flex min-h-screen">
+        <aside class="bg-slate-900 w-1/6">
+            <div class="flex h-screen flex-col justify-between border-e border-gray-100">
+                <div class="px-4 py-6">
+                    <h1 class="text-white/90 text-2xl font-black tracking-tighter">
+                        Vision Auto <span class="text-blue-700 text-3xl">.</span></h1>
+                    <ul class="mt-10 pt-4 space-y-1 flex flex-col gap-4">
+                        <li>
+                            <a href="#" class="block rounded-lg bg-blue-900 px-4 py-2 text-sm font-medium text-white">
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <details class="group [&amp;_summary::-webkit-details-marker]:hidden" open="">
+                                <summary
+                                    class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-white hover:bg-blue-900">
+                                    <span class="text-sm font-medium"> Analytics </span>
+                                    <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </span>
+                                </summary>
+                                <ul class="mt-2 space-y-1 px-4">
+                                    <li>
+                                        <a href="#"
+                                            class="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-blue-900">
+                                            Sales Management
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-blue-900">
+                                            Order Management
+                                        </a>
+                                    </li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-blue-900">
+                                Calendar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sticky inset-x-0 bottom-0 border-t border-gray-100">
+                    <a href="#" class="flex items-center gap-2 p-4 hover:bg-blue-900">
+                        <img alt=""
+                            src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?auto=format&amp;fit=crop&amp;q=80&amp;w=1160"
+                            class="size-10 rounded-full object-cover">
+                        <div>
+                            <p class="text-white">
+                                <strong class="block font-bold text-lg">Isaac Ndungu</strong>
+                                <span class="font-medium text-xs"> Administrator</span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
             </div>
+        </aside>
 
-            <div class="sticky inset-x-0 bottom-0 border-t border-gray-100">
-                <a href="#" class="flex items-center gap-2 p-4 hover:bg-blue-900">
-                    <img alt=""
-                        src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?auto=format&amp;fit=crop&amp;q=80&amp;w=1160"
-                        class="size-10 rounded-full object-cover">
 
+
+        <main class="bg-gray-100 flex-1 px-6">
+            <header>
+                <div class="flex justify-between mb-6 pt-4 ">
                     <div>
-                        <p class="text-white">
-                            <strong class="block font-bold text-lg">Isaac Ndungu</strong>
+                        <h2 class="text-3xl font-black">Welcome back!!</h2>
+                        <p class="text-sm">Below is a view of your shop performance</p>
+                    </div>
 
-                            <span class="font-medium text-xs"> Administrator</span>
+
+                    <div class="w-[400px] pt-2">
+                        <button type="button"
+                            class="flex h-10 w-full items-center justify-between gap-3 rounded-full  bg-gray-200 px-3 text-sm text-slate-700">
+                            <span class="">Type to search...</span>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <div class="flex gap-10 p-4">
+                        <i class="fa-regular fa-envelope fa-2xl"></i>
+                        <i class="fa-regular fa-bell fa-2xl"></i>
+                    </div>
+
+                </div>
+            </header>
+            <section class="flex gap-4">
+                <article class="rounded-lg border border-gray-100 bg-white p-6 w-full">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-md text-slate-900 font-black">Total Revenue</p>
+                            <p class="text-2xl font-bold text-blue-700">KSh 92,434,000</p>
+                        </div>
+                        <span class="rounded-full bg-blue-100 p-3 text-blue-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-8" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z">
+                                </path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="mt-1 flex gap-1 text-green-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                        <p class="flex gap-2 text-xs">
+                            <span class="font-medium"> 12.81% </span>
+                            <span class="text-gray-500"> This month </span>
                         </p>
                     </div>
-                </a>
-            </div>
-        </div>
-    </aside>
+                </article>
+                <article class="rounded-lg border border-gray-100 bg-white p-6 w-full">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-md text-slate-900 font-black">Total Orders</p>
+                            <p class="text-2xl font-bold text-blue-700">13,962</p>
+                        </div>
+                        <span class="rounded-full bg-blue-100 p-3 text-blue-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-8" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z">
+                                </path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="mt-1 flex gap-1 text-green-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                        <p class="flex gap-2 text-xs">
+                            <span class="font-medium"> 5.53% </span>
+                            <span class="text-gray-500"> Since last week </span>
+                        </p>
+                    </div>
+                </article>
+                <article class="rounded-lg border border-gray-100 bg-white p-6 w-full">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-md text-slate-900 font-black">Customers</p>
+                            <p class="text-2xl font-bold text-blue-700">662</p>
+                        </div>
+                        <span class="rounded-full bg-blue-100 p-3 text-blue-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-8" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z">
+                                </path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="mt-1 flex gap-1 text-red-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path>
+                        </svg>
+                        <p class="flex gap-2 text-xs">
+                            <span class="font-medium"> 1.2% </span>
+                            <span class="text-gray-500"> Since last week </span>
+                        </p>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
 </body>
 
 </html>
