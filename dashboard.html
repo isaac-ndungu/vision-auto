@@ -17,7 +17,7 @@
 
 <body class="font-mono">
     <div class="flex min-h-screen">
-        <aside class="bg-slate-900 w-1/6">
+        <aside class="fixed bg-slate-900 w-64 h-screen">
             <div class="flex h-screen flex-col justify-between border-e border-gray-100">
                 <div class="px-4 py-6">
                     <h1 class="text-white/90 text-2xl font-black tracking-tighter">
@@ -84,11 +84,11 @@
 
 
 
-        <main class="bg-gray-100 flex-1 px-6">
+        <main class="ml-64 bg-gray-100 flex-1 px-6">
             <header>
                 <div class="flex justify-between mb-6 pt-4 ">
                     <div>
-                        <h2 class="text-3xl font-black">Welcome back!!</h2>
+                        <h2 class="text-3xl font-black">Dashboard Overview</h2>
                         <p class="text-sm">Below is a view of your shop performance</p>
                     </div>
 
@@ -107,6 +107,7 @@
 
                 </div>
             </header>
+
             <section class="flex gap-4">
                 <article class="rounded-lg border border-gray-100 bg-white p-6 w-full">
                     <div class="flex items-center justify-between">
@@ -142,12 +143,7 @@
                             <p class="text-2xl font-bold text-blue-700">13,962</p>
                         </div>
                         <span class="rounded-full bg-blue-100 p-3 text-blue-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="size-8" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z">
-                                </path>
-                            </svg>
+                            <i class="fa-solid fa-truck-fast fa-lg" style="color: #155DFC;"></i>
                         </span>
                     </div>
                     <div class="mt-1 flex gap-1 text-green-600">
@@ -169,12 +165,7 @@
                             <p class="text-2xl font-bold text-blue-700">662</p>
                         </div>
                         <span class="rounded-full bg-blue-100 p-3 text-blue-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="size-8" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z">
-                                </path>
-                            </svg>
+                            <i class="fa-solid fa-people-group fa-lg" style="color: #155DFC;"></i>
                         </span>
                     </div>
                     <div class="mt-1 flex gap-1 text-red-600">
@@ -190,6 +181,74 @@
                     </div>
                 </article>
             </section>
+
+
+            <section class="rounded-lg border border-gray-100 bg-white my-10">
+                <div class="p-4">
+                    <h2 class="text-3xl font-black">Sales Overview</h2>
+                    <p class="text-sm">sales and website visitors</p>
+                </div>
+                <img src="assets/sales-overview.png" alt="Sales overview chart" class="w-full">
+            </section>
+
+            
+            <section>
+                <article class="rounded-lg border border-gray-100 bg-white p-6 w-full">
+                    <div class="border-b border-gray-200 pb-3">
+                        <h2 class="text-3xl font-black">Recent Activity</h2>
+                        <p class="text-sm">last orders and deliveries</p>
+                    </div>
+
+                    <div class="border-b border-gray-200 py-3">
+                        <div class="flex justify-between ">
+                            <h3 class="text-lg font-semibold">Jane Doe <span class="text-blue-700 font-black">.</span> <span class="text-sm font-extralight">placed a new order</span></h3>
+                            <p class="font-extralight text-sm">10 minutes ago</p>
+                        </div>
+                        <p class="font-extralight text-sm mt-3">Break Pads Set</p>
+                        <div class="flex gap-5 mt-2">
+                            <p class="font-bold">KSh 5,000</p>
+                            <p class="bg-amber-600/30 text-amber-600 rounded-full px-2 text-sm font-extralight pt-px">pending</p>
+                        </div>
+                    </div>
+
+                    <div class="border-b border-gray-200 py-3">
+                        <div class="flex justify-between ">
+                            <h3 class="text-lg font-semibold">Sarah John <span class="text-blue-700 font-black">.</span> <span class="text-sm font-extralight">received order</span></h3>
+                            <p class="font-extralight text-sm">35 minutes ago</p>
+                        </div>
+                        <p class="font-extralight text-sm mt-3">Engine Oil Filter</p>
+                        <div class="flex gap-5 mt-2">
+                            <p class="font-bold">KSh 12,000</p>
+                            <p class="bg-green-500/30 text-green-600 rounded-full px-2 text-sm font-extralight pt-px">delivered</p>
+                        </div>
+                    </div>
+
+                    <div class="border-b border-gray-200 py-3">
+                        <div class="flex justify-between ">
+                            <h3 class="text-lg font-semibold">Michael Obama <span class="text-blue-700 font-black">.</span> <span class="text-sm font-extralight">placed a new order</span></h3>
+                            <p class="font-extralight text-sm">1 hour ago</p>
+                        </div>
+                        <p class="font-extralight text-sm mt-3">Spark plugs</p>
+                        <div class="flex gap-5 mt-2">
+                            <p class="font-bold">KSh 16,000</p>
+                            <p class="bg-blue-500/30 text-blue-600 rounded-full px-2 text-sm font-extralight pt-px">processing</p>
+                        </div>
+                    </div>
+
+                    <div class="border-b border-gray-200 py-3">
+                        <div class="flex justify-between ">
+                            <h3 class="text-lg font-semibold">Emily Makena <span class="text-blue-700 font-black">.</span> <span class="text-sm font-extralight">canceled order</span></h3>
+                            <p class="font-extralight text-sm">2 hours ago</p>
+                        </div>
+                        <p class="font-extralight text-sm mt-3">Air Filter</p>
+                        <div class="flex gap-5 mt-2">
+                            <p class="font-bold">KSh 3,000</p>
+                            <p class="bg-red-500/30 text-red-600 rounded-full px-2 text-sm font-extralight pt-px">canceled</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
         </main>
     </div>
 </body>
