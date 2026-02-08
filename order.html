@@ -24,7 +24,8 @@
                         Vision Auto <span class="text-blue-700 text-3xl">.</span></h1>
                     <ul class="mt-10 pt-4 space-y-1 flex flex-col gap-4">
                         <li>
-                            <a href="dashboard.html" class="block rounded-lg  px-4 py-2 text-sm font-medium text-white hover:bg-blue-900">
+                            <a href="dashboard.html"
+                                class="block rounded-lg  px-4 py-2 text-sm font-medium text-white hover:bg-blue-900">
                                 Dashboard
                             </a>
                         </li>
@@ -129,7 +130,7 @@
                             <i class="fa-solid fa-truck-fast fa-lg" style="color: #155DFC;"></i>
                         </span>
                     </div>
-                    
+
                 </article>
                 <article class="rounded-lg border border-gray-100 bg-white p-6 w-full">
                     <div class="flex items-center justify-between">
@@ -138,10 +139,10 @@
                             <p class="text-2xl font-bold text-blue-700">965</p>
                         </div>
                         <span class="rounded-full bg-green-100/60 p-3">
-                            <img src="assets/package.png" alt="completed orders icon" class="w-8">                           
+                            <img src="assets/package.png" alt="completed orders icon" class="w-8">
                         </span>
                     </div>
-                    
+
                 </article>
 
                 <article class="rounded-lg border border-gray-100 bg-white p-6 w-full">
@@ -154,14 +155,162 @@
                             <img src="assets/canceled.png" alt="canceled orders icon" class="w-8">
                         </span>
                     </div>
-                    
+
                 </article>
             </section>
 
 
+            <section class="rounded-lg border border-gray-100 bg-white my-10">
+                <div class="p-4">
+                    <h2 class="text-3xl font-black tracking-tight">Recent Orders</h2>
+                    <p class="text-sm">Overview of all orders</p>
+                </div>
 
-            
-           
+                <div class="p-4">
+                    <table class="rounded-lg w-full text-left ">
+                        <thead>
+                            <tr class="uppercase bg-gray-200/40">
+                                <th class="p-2">Order ID</th>
+                                <th class="py-2">Customer</th>
+                                <th class="py-2">Product</th>
+                                <th class="py-2">Quantity</th>
+                                <th class="py-2">Total</th>
+                                <th class="py-2">Status</th>
+                                <th class="py-2">Date</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="text-slate-600">
+                            <tr class="hover:bg-gray-100/50">
+                                <td class="py-6 px-2 text-slate-900 font-bold">ORD-4897</td>
+                                <td class="py-6">Jane Doe</td>
+                                <td class="py-6">Brake Pads Set</td>
+                                <td class="py-6">2</td>
+                                <td class="py-6 text-slate-900 font-bold">KSh 5,000</td>
+                                <td class="py-6">
+                                    <p
+                                        class="bg-blue-500/30 text-blue-600 text-center rounded-full text-sm font-extralight">
+                                        processing
+                                    </p>
+                                </td>
+                                <td class="py-6">2026-02-06</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-100/50">
+                                <td class="py-6 px-2 text-slate-900 font-bold">ORD-4896</td>
+                                <td class="py-6">Sarah John</td>
+                                <td class="py-6">Engine Oil Filter</td>
+                                <td class="py-6">6</td>
+                                <td class="py-6 text-slate-900 font-bold">KSh 12,000</td>
+                                <td class="py-6">
+                                    <p
+                                        class="bg-green-500/30 text-green-600 text-center rounded-full px-2 text-sm font-extralight">
+                                        completed
+                                </td>
+                                <td class="py-6">2026-02-06</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-100/50">
+                                <td class="py-6 px-2 text-slate-900 font-bold">ORD-4895</td>
+                                <td class="py-6">Michael Obama</td>
+                                <td class="py-6">Spark Plugs</td>
+                                <td class="py-6">8</td>
+                                <td class="py-6 text-slate-900 font-bold">KSh 16,000</td>
+                                <td class="py-6">
+                                    <p
+                                        class="bg-amber-500/30 text-amber-600 text-center rounded-full px-2 text-sm font-extralight">
+                                        pending
+                                </td>
+                                <td class="py-6">2026-02-06</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-100/50">
+                                <td class="py-6 px-2 text-slate-900 font-bold">ORD-4894</td>
+                                <td class="py-6">Emily Makena</td>
+                                <td class="py-6">Ait Filter</td>
+                                <td class="py-6">3</td>
+                                <td class="py-6 text-slate-900 font-bold">KSh 3,000</td>
+                                <td class="py-6">
+                                    <p
+                                        class="bg-red-500/30 text-red-600 text-center rounded-full px-2 text-sm font-extralight">
+                                        canceled
+                                </td>
+                                <td class="py-6">2026-02-06</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-100/50">
+                                <td class="py-6 px-2 text-slate-900 font-bold">ORD-4893</td>
+                                <td class="py-6">David Wilson</td>
+                                <td class="py-6">Windshield Wipers</td>
+                                <td class="py-6">2</td>
+                                <td class="py-6 text-slate-900 font-bold">KSh 2,500</td>
+                                <td class="py-6">
+                                    <p
+                                        class="bg-blue-500/30 text-blue-600 text-center rounded-full px-2 text-sm font-extralight ">
+                                        processing
+                                </td>
+                                <td class="py-6">2026-02-06</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-100/50">
+                                <td class="py-6 px-2 text-slate-900 font-bold">ORD-4892</td>
+                                <td class="py-6">Lisa Anderson</td>
+                                <td class="py-6">Transmission fluid</td>
+                                <td class="py-6">2</td>
+                                <td class="py-6 text-slate-900 font-bold">KSh 2,800</td>
+                                <td class="py-6">
+                                    <p
+                                        class="bg-green-500/30 text-green-600 text-center rounded-full px-2 text-sm font-extralight">
+                                        completed
+                                </td>
+                                <td class="py-6">2026-02-06</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-100/50">
+                                <td class="py-6 px-2 text-slate-900 font-bold">ORD-4891</td>
+                                <td class="py-6">Emily Makena</td>
+                                <td class="py-6">Ait Filter</td>
+                                <td class="py-6">3</td>
+                                <td class="py-6 text-slate-900 font-bold">KSh 3,000</td>
+                                <td class="py-6">
+                                    <p
+                                        class="bg-red-500/30 text-red-600 text-center rounded-full px-2 text-sm font-extralight">
+                                        canceled
+                                </td>
+                                <td class="py-6">2026-02-06</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-100/50">
+                                <td class="py-6 px-2 text-slate-900 font-bold">ORD-4890</td>
+                                <td class="py-6">David Wilson</td>
+                                <td class="py-6">Windshield Wipers</td>
+                                <td class="py-6">2</td>
+                                <td class="py-6 text-slate-900 font-bold">KSh 2,500</td>
+                                <td class="py-6">
+                                    <p
+                                        class="bg-blue-500/30 text-blue-600 text-center rounded-full px-2 text-sm font-extralight ">
+                                        processing
+                                </td>
+                                <td class="py-6">2026-02-06</td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-100/50">
+                                <td class="py-6 px-2 text-slate-900 font-bold">ORD-4889</td>
+                                <td class="py-6">Lisa Anderson</td>
+                                <td class="py-6">Transmission fluid</td>
+                                <td class="py-6">2</td>
+                                <td class="py-6 text-slate-900 font-bold">KSh 2,800</td>
+                                <td class="py-6">
+                                    <p
+                                        class="bg-green-500/30 text-green-600 text-center rounded-full px-2 text-sm font-extralight">
+                                        completed
+                                </td>
+                                <td class="py-6">2026-02-06</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
         </main>
     </div>
