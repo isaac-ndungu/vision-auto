@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Vision Auto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-900 font-mono">
+    <main>
+        <div class="flex h-[700px] w-full items-center">
+            <div class="w-full flex flex-col items-center justify-center">
+                <h1 class="text-white/90 text-6xl font-black">Vision Auto <span class="text-blue-700 text-7xl">.</span></h1>
+            </div>
+
+            <div class="h-2/3 w-1 bg-white/90"></div>
+
+
+            <div class="w-full flex flex-col items-center justify-center">
+
+                <form action="dashboard.html" method="get" class="md:w-96 w-80 flex flex-col items-center justify-center">
+                    <h2 class="text-4xl text-white font-medium">Welcome back!</h2>
+                    <p class="text-sm text-white my-6">Please sign in to continue</p>
+
+                    <div
+                        class="flex items-center w-full bg-transparent border border-white h-12 rounded-full overflow-hidden pl-6 gap-2">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path fill="#626262"
+                                d="M240 192C240 147.8 275.8 112 320 112C364.2 112 400 147.8 400 192C400 236.2 364.2 272 320 272C275.8 272 240 236.2 240 192zM448 192C448 121.3 390.7 64 320 64C249.3 64 192 121.3 192 192C192 262.7 249.3 320 320 320C390.7 320 448 262.7 448 192zM144 544C144 473.3 201.3 416 272 416L368 416C438.7 416 496 473.3 496 544L496 552C496 565.3 506.7 576 520 576C533.3 576 544 565.3 544 552L544 544C544 446.8 465.2 368 368 368L272 368C174.8 368 96 446.8 96 544L96 552C96 565.3 106.7 576 120 576C133.3 576 144 565.3 144 552L144 544z" />
+                        </svg>
+                        <input type="text" placeholder="username"
+                            class="bg-transparent text-gray-500/80 placeholder-gray-500/80 outline-none text-sm w-full h-full"
+                            required>
+                    </div>
+
+                    <div
+                        class="flex items-center mt-6 w-full bg-transparent border border-white h-12 rounded-full overflow-hidden pl-6 gap-2">
+                        <svg width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13 8.5c0-.938-.729-1.7-1.625-1.7h-.812V4.25C10.563 1.907 8.74 0 6.5 0S2.438 1.907 2.438 4.25V6.8h-.813C.729 6.8 0 7.562 0 8.5v6.8c0 .938.729 1.7 1.625 1.7h9.75c.896 0 1.625-.762 1.625-1.7zM4.063 4.25c0-1.406 1.093-2.55 2.437-2.55s2.438 1.144 2.438 2.55V6.8H4.061z"
+                                fill="#6B7280" />
+                        </svg>
+                        <input type="password" placeholder="Password"
+                            class="bg-transparent text-gray-500/80 placeholder-gray-500/80 outline-none text-sm w-full h-full"
+                            required>
+                    </div>
+
+                    <button type="submit"
+                        class="mt-8 w-full h-11 rounded-full text-white bg-blue-700 hover:opacity-90 transition-opacity uppercase font-bold tracking-widest">
+                        Login
+                    </button>
+                    <div class="w-full mt-8 text-gray-500/80 text-right">
+    
+                        <a class="text-sm underline" href="#">Forgot password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
