@@ -17,7 +17,7 @@
 
 <body class="font-mono">
     <div class="flex min-h-screen">
-        <aside class="fixed bg-slate-900 w-64 h-screen">
+        <aside class="fixed bg-slate-900 lg:w-64 md:w-48 w-40 h-screen">
             <div class="flex h-screen flex-col justify-between border-e border-gray-100">
                 <div class="px-4 py-6">
                     <h1 class="text-white/90 text-2xl font-black tracking-tighter">
@@ -90,19 +90,19 @@
 
 
 
-        <main class="ml-64 bg-gray-100 flex-1 px-6">
+        <main class="lg:ml-64 md:ml-48 ml-40 bg-gray-100 flex-1 px-6">
             <header>
                 <div class="flex justify-between mb-6 pt-4 ">
                     <div>
-                        <h1 class="text-4xl font-black tracking-tight">Analytics</h1>
+                        <h1 class="lg:text-3xl font-black tracking-tight md:text-2xl text-xl">Analytics</h1>
                     </div>
 
 
-                    <div class="w-[40%] pt-2 relative">
+                    <div class="lg:w-[30%] pt-2 relative md:w-[20%] w-[10%]">
                         <label><i class="fa-solid fa-magnifying-glass absolute right-3 top-1/3"></i></label>
 
                         <input type="search"
-                            class="flex h-10 w-full items-center justify-between rounded-full  bg-gray-200 px-3 text-sm text-slate-700 cursor-text" placeholder="Type to search ...">
+                            class="flex h-10 w-full items-center justify-between rounded-full  bg-gray-200 px-3 lg:text-sm md:text-xs  text-slate-700" placeholder="Type to search ...">
                             
                         </input>
                         
@@ -115,8 +115,8 @@
                 </div>
             </header>
 
-            <section class="flex gap-4">
-                <article class="rounded-lg border border-gray-100 bg-white p-6 w-full hover:scale-105 transition">
+            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <article class="rounded-lg border border-gray-100 bg-white p-6 hover:scale-105 transition">
                     <div class="flex items-center justify-between">
                         <div>
                             <p class="text-md text-slate-900 font-black">Pending Orders</p>
@@ -127,7 +127,7 @@
                         </span>
                     </div>
                 </article>
-                <article class="rounded-lg border border-gray-100 bg-white p-6 w-full hover:scale-105 transition">
+                <article class="rounded-lg border border-gray-100 bg-white p-6 hover:scale-105 transition">
                     <div class="flex items-center justify-between">
                         <div>
                             <p class="text-md text-slate-900 font-black">Processing Orders</p>
@@ -139,7 +139,7 @@
                     </div>
 
                 </article>
-                <article class="rounded-lg border border-gray-100 bg-white p-6 w-full hover:scale-105 transition">
+                <article class="rounded-lg border border-gray-100 bg-white p-6 hover:scale-105 transition">
                     <div class="flex items-center justify-between">
                         <div>
                             <p class="text-md text-slate-900 font-black">Completed Orders</p>
@@ -152,7 +152,7 @@
 
                 </article>
 
-                <article class="rounded-lg border border-gray-100 bg-white p-6 w-full hover:scale-105 transition">
+                <article class="rounded-lg border border-gray-100 bg-white p-6 hover:scale-105 transition">
                     <div class="flex items-center justify-between">
                         <div>
                             <p class="text-md text-slate-900 font-black">Canceled Orders</p>
@@ -180,10 +180,10 @@
                                 <th class="p-2">Order ID</th>
                                 <th class="py-2">Customer</th>
                                 <th class="py-2">Product</th>
-                                <th class="py-2">Quantity</th>
+                                <th class="py-2 hidden lg:block">Quantity</th>
                                 <th class="py-2">Total</th>
                                 <th class="py-2">Status</th>
-                                <th class="py-2">Date</th>
+                                <th class="py-2 hidden lg:block">Date</th>
                             </tr>
                         </thead>
 
@@ -192,7 +192,7 @@
                                 <td class="py-6 px-2 text-slate-900 font-bold">ORD-4897</td>
                                 <td class="py-6">Jane Doe</td>
                                 <td class="py-6">Brake Pads Set</td>
-                                <td class="py-6">2</td>
+                                <td class="py-6 hidden lg:block">2</td>
                                 <td class="py-6 text-slate-900 font-bold">KSh 5,000</td>
                                 <td class="py-6">
                                     <p
@@ -200,119 +200,119 @@
                                         processing
                                     </p>
                                 </td>
-                                <td class="py-6">2026-02-06</td>
+                                <td class="py-6 hidden lg:block">2026-02-06</td>
                             </tr>
 
                             <tr class="hover:bg-gray-100/50">
                                 <td class="py-6 px-2 text-slate-900 font-bold">ORD-4896</td>
                                 <td class="py-6">Sarah John</td>
                                 <td class="py-6">Engine Oil Filter</td>
-                                <td class="py-6">6</td>
+                                <td class="py-6 hidden lg:block">6</td>
                                 <td class="py-6 text-slate-900 font-bold">KSh 12,000</td>
                                 <td class="py-6">
                                     <p
                                         class="bg-green-500/30 text-green-600 text-center rounded-full px-2 text-sm font-extralight">
                                         completed
                                 </td>
-                                <td class="py-6">2026-02-06</td>
+                                <td class="py-6 hidden lg:block">2026-02-06</td>
                             </tr>
 
                             <tr class="hover:bg-gray-100/50">
                                 <td class="py-6 px-2 text-slate-900 font-bold">ORD-4895</td>
                                 <td class="py-6">Michael Obama</td>
                                 <td class="py-6">Spark Plugs</td>
-                                <td class="py-6">8</td>
+                                <td class="py-6 hidden lg:block">8</td>
                                 <td class="py-6 text-slate-900 font-bold">KSh 16,000</td>
                                 <td class="py-6">
                                     <p
                                         class="bg-amber-500/30 text-amber-600 text-center rounded-full px-2 text-sm font-extralight">
                                         pending
                                 </td>
-                                <td class="py-6">2026-02-06</td>
+                                <td class="py-6 hidden lg:block">2026-02-06</td>
                             </tr>
 
                             <tr class="hover:bg-gray-100/50">
                                 <td class="py-6 px-2 text-slate-900 font-bold">ORD-4894</td>
                                 <td class="py-6">Emily Makena</td>
                                 <td class="py-6">Ait Filter</td>
-                                <td class="py-6">3</td>
+                                <td class="py-6 hidden lg:block">3</td>
                                 <td class="py-6 text-slate-900 font-bold">KSh 3,000</td>
                                 <td class="py-6">
                                     <p
                                         class="bg-red-500/30 text-red-600 text-center rounded-full px-2 text-sm font-extralight">
                                         canceled
                                 </td>
-                                <td class="py-6">2026-02-06</td>
+                                <td class="py-6 hidden lg:block">2026-02-06</td>
                             </tr>
 
                             <tr class="hover:bg-gray-100/50">
                                 <td class="py-6 px-2 text-slate-900 font-bold">ORD-4893</td>
                                 <td class="py-6">David Wilson</td>
                                 <td class="py-6">Windshield Wipers</td>
-                                <td class="py-6">2</td>
+                                <td class="py-6 hidden lg:block">2</td>
                                 <td class="py-6 text-slate-900 font-bold">KSh 2,500</td>
                                 <td class="py-6">
                                     <p
                                         class="bg-blue-500/30 text-blue-600 text-center rounded-full px-2 text-sm font-extralight ">
                                         processing
                                 </td>
-                                <td class="py-6">2026-02-06</td>
+                                <td class="py-6 hidden lg:block">2026-02-06</td>
                             </tr>
 
                             <tr class="hover:bg-gray-100/50">
                                 <td class="py-6 px-2 text-slate-900 font-bold">ORD-4892</td>
                                 <td class="py-6">Lisa Anderson</td>
                                 <td class="py-6">Transmission fluid</td>
-                                <td class="py-6">2</td>
+                                <td class="py-6 hidden lg:block">2</td>
                                 <td class="py-6 text-slate-900 font-bold">KSh 2,800</td>
                                 <td class="py-6">
                                     <p
                                         class="bg-green-500/30 text-green-600 text-center rounded-full px-2 text-sm font-extralight">
                                         completed
                                 </td>
-                                <td class="py-6">2026-02-06</td>
+                                <td class="py-6 hidden lg:block">2026-02-06</td>
                             </tr>
 
                             <tr class="hover:bg-gray-100/50">
                                 <td class="py-6 px-2 text-slate-900 font-bold">ORD-4891</td>
                                 <td class="py-6">Emily Makena</td>
                                 <td class="py-6">Ait Filter</td>
-                                <td class="py-6">3</td>
+                                <td class="py-6 hidden lg:block">3</td>
                                 <td class="py-6 text-slate-900 font-bold">KSh 3,000</td>
                                 <td class="py-6">
                                     <p
                                         class="bg-red-500/30 text-red-600 text-center rounded-full px-2 text-sm font-extralight">
                                         canceled
                                 </td>
-                                <td class="py-6">2026-02-06</td>
+                                <td class="py-6 hidden lg:block">2026-02-06</td>
                             </tr>
 
                             <tr class="hover:bg-gray-100/50">
                                 <td class="py-6 px-2 text-slate-900 font-bold">ORD-4890</td>
                                 <td class="py-6">David Wilson</td>
                                 <td class="py-6">Windshield Wipers</td>
-                                <td class="py-6">2</td>
+                                <td class="py-6 hidden lg:block">2</td>
                                 <td class="py-6 text-slate-900 font-bold">KSh 2,500</td>
                                 <td class="py-6">
                                     <p
                                         class="bg-blue-500/30 text-blue-600 text-center rounded-full px-2 text-sm font-extralight ">
                                         processing
                                 </td>
-                                <td class="py-6">2026-02-06</td>
+                                <td class="py-6 hidden lg:block">2026-02-06</td>
                             </tr>
 
                             <tr class="hover:bg-gray-100/50">
                                 <td class="py-6 px-2 text-slate-900 font-bold">ORD-4889</td>
                                 <td class="py-6">Lisa Anderson</td>
                                 <td class="py-6">Transmission fluid</td>
-                                <td class="py-6">2</td>
+                                <td class="py-6 hidden lg:block">2</td>
                                 <td class="py-6 text-slate-900 font-bold">KSh 2,800</td>
                                 <td class="py-6">
                                     <p
                                         class="bg-green-500/30 text-green-600 text-center rounded-full px-2 text-sm font-extralight">
                                         completed
                                 </td>
-                                <td class="py-6">2026-02-06</td>
+                                <td class="py-6 hidden lg:block">2026-02-06</td>
                             </tr>
                         </tbody>
                     </table>
