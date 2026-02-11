@@ -8,6 +8,74 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/ac82667efe.js" crossorigin="anonymous"></script>
 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { packages: ['corechart', 'bar'] });
+        google.charts.setOnLoadCallback(drawAxisTickColors);
+
+        function drawAxisTickColors() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Month');
+            data.addColumn('number', 'Sales');
+            data.addColumn('number', 'Visitors');
+
+            data.addRows([
+                ['Jan', 1150, 450],
+                ['Feb', 1267, 560],
+                ['Mar', 1023, 400],
+                ['Apr', 1345, 635],
+                ['May', 1050, 403],
+                ['Jun', 896, 375],
+                ['Jul', 1193, 486],
+                ['Aug', 1407, 600],
+                ['Sep', 1470, 663],
+                ['Oct', 1356, 589],
+                ['Nov', 1278, 532],
+                ['Dec', 1300, 571],
+
+            ]);
+
+            var options = {
+                title: 'Sales and Visitors throughout the year',
+                focusTarget: 'category',
+                hAxis: {
+                    title: 'Month',
+                    textStyle: {
+                        fontSize: 14,
+                        color: '#053061',
+                        bold: true,
+                        italic: false
+                    },
+                    titleTextStyle: {
+                        fontSize: 18,
+                        color: '#053061',
+                        bold: true,
+                        italic: false
+                    }
+                },
+                vAxis: {
+                    title: 'Amount',
+                    textStyle: {
+                        fontSize: 14,
+                        color: '#000000',
+                        bold: false,
+                        italic: false
+                    },
+                    titleTextStyle: {
+                        fontSize: 16,
+                        color: '#000000',
+                        bold: true,
+                        italic: false
+                    }
+                },
+
+                colors: ['#000000', '#1f77b4']
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('sales-visitors-chart'));
+            chart.draw(data, options);
+        }
+    </script>
 </head>
 
 <body class="font-mono">
@@ -71,7 +139,7 @@
                     </div>
 
                     <div>
-                        <a href="index.html" class="flex justify-end gap-4 px-4 py-2 text-white hover:bg-blue-900">
+                        <a href="index.html" class="flex justify-end gap-4 px-4 py-2 text-red-600 hover:bg-red-900/30">
                             Log Out <i class="fa-solid fa-right-from-bracket"></i></a>
                     </div>
                 </div>
@@ -187,7 +255,7 @@
                     <h2 class="text-3xl font-black tracking-tight">Sales Overview</h2>
                     <p class="text-sm">sales and website visitors</p>
                 </div>
-                <img src="assets/sales-overview.png" alt="Sales overview chart" class="w-full">
+                  <div id="sales-visitors-chart" class="w-100% h-[400px]"></div>
             </section>
 
 
@@ -201,7 +269,8 @@
                     <div class="border-b border-gray-200 py-3  hover:scale-y-105 transition">
                         <div class="flex justify-between ">
                             <h3 class="text-lg font-semibold">Jane Doe <span class="text-blue-700 font-black">.</span>
-                                <span class="text-sm font-extralight">placed a new order</span></h3>
+                                <span class="text-sm font-extralight">placed a new order</span>
+                            </h3>
                             <p class="font-extralight text-sm">10 minutes ago</p>
                         </div>
                         <p class="font-extralight text-sm mt-3">Break Pads Set</p>
@@ -215,7 +284,8 @@
                     <div class="border-b border-gray-200 py-3 hover:scale-y-105 transition">
                         <div class="flex justify-between ">
                             <h3 class="text-lg font-semibold">Sarah John <span class="text-blue-700 font-black">.</span>
-                                <span class="text-sm font-extralight">received order</span></h3>
+                                <span class="text-sm font-extralight">received order</span>
+                            </h3>
                             <p class="font-extralight text-sm">35 minutes ago</p>
                         </div>
                         <p class="font-extralight text-sm mt-3">Engine Oil Filter</p>
