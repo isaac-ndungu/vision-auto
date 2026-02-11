@@ -1,7 +1,6 @@
 .sidebar {
-    position: absolute;
     transition: 0.5s ease;
-    transform:translateX(-100%);
+    width: 4rem;
 
 }
 
@@ -75,7 +74,7 @@
 }
 
 #menu-toggle:checked ~ .sidebar {
-    transform:translateX(0);
+    width: 16rem;
 }
 
 
@@ -83,7 +82,42 @@
     margin-left: 16rem;
 }
 
-#menu-toggle:not(:checked) ~ main {
-    margin-left: 0;
+
+
+
+.sidebar .label {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+
 }
 
+#menu-toggle:checked ~ .sidebar .label {
+    opacity: 1;
+    width: auto;
+}
+
+
+main {
+    transition: margin-left 0.5s ease;
+    margin-left: 4rem;
+
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+#menu-toggle:checked ~ .sidebar .nav-link {
+    justify-content: flex-start;
+    padding-left: 0.75rem 1rem;
+}
+
+.nav-link.active {
+    background-color: #1e3a8a;
+}
