@@ -8,11 +8,43 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/ac82667efe.js" crossorigin="anonymous"></script>
 
-    <!-- <style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Category Name', 'Amount'],
+                ['Engine Parts', 360843],
+                ['Brake Systems', 264618],
+                ['Filters', 192449],
+                ['Electricals', 168393],
+                ['Body Parts', 144337],
+                ['Others', 72168]
+            ]);
+
+            var options = {
+                title: 'Revenue Distibution',
+                width: '100%',
+                height: 400
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+
+
+        
+    </script>
+
+    <style>
         * {
             outline: red solid 2px;
         }
-    </style> -->
+    </style>
 </head>
 
 <body class="font-mono">
@@ -80,10 +112,10 @@
                         </div>
                     </div>
 
-                        <div>
-                            <a href="index.html" class="flex justify-end gap-4 px-4 py-2 text-white hover:bg-blue-900">
-                                 Log Out <i class="fa-solid fa-right-from-bracket"></i></a>
-                        </div>
+                    <div>
+                        <a href="index.html" class="flex justify-end gap-4 px-4 py-2 text-white hover:bg-blue-900">
+                            Log Out <i class="fa-solid fa-right-from-bracket"></i></a>
+                    </div>
                 </div>
             </div>
         </aside>
@@ -102,10 +134,11 @@
                         <label><i class="fa-solid fa-magnifying-glass absolute right-3 top-1/3"></i></label>
 
                         <input type="search"
-                            class="flex h-10 w-full items-center justify-between rounded-full  bg-gray-200 px-3 text-sm text-slate-700 cursor-text" placeholder="Type to search ...">
-                            
+                            class="flex h-10 w-full items-center justify-between rounded-full  bg-gray-200 px-3 text-sm text-slate-700 cursor-text"
+                            placeholder="Type to search ...">
+
                         </input>
-                        
+
                     </div>
                     <div class="flex gap-10 p-4">
                         <i class="fa-regular fa-envelope fa-2xl"></i>
@@ -216,7 +249,7 @@
                     <h2 class="text-3xl font-black tracking-tight">Revenue</h2>
                     <p class="text-sm">Distribution of revenue across product categories</p>
                     <span>
-                        <img src="assets/pie.png" alt="Revenue pie chart">
+                        <div id="piechart" class="w-full h-[400px]"></div>
                     </span>
                 </div>
 
@@ -229,7 +262,7 @@
                 </div>
             </section>
 
-            
+
         </main>
     </div>
 </body>
