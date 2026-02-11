@@ -31,20 +31,54 @@
                 height: 400
             };
 
-            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            var chart = new google.visualization.PieChart(document.getElementById('revenue-piechart'));
 
             chart.draw(data, options);
         }
 
 
-        
+        google.charts.setOnLoadCallback(drawBasic);
+
+        function drawBasic() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Product Category');
+            data.addColumn('number', 'Revenue');
+
+            data.addRows([
+                ['Engine Parts', 360843],
+                ['Brake Systems', 264618],
+                ['Filters', 192449],
+                ['Electricals', 168393],
+                ['Body Parts', 144337],
+                ['Others', 72168]
+            ]);
+
+            var options = {
+                title: 'Revenue by Product Category',
+                hAxis: {
+                    title: 'Product Category',
+                },
+                vAxis: {
+                    title: 'Revenue (KSh)'
+                }
+            };
+
+            var chart = new google.visualization.ColumnChart(
+                document.getElementById('revenue-bar-chart'));
+
+            chart.draw(data, options);
+        }
+
+
+       
     </script>
 
-    <style>
+    <!-- <style>
         * {
             outline: red solid 2px;
         }
-    </style>
+    </style> -->
 </head>
 
 <body class="font-mono">
@@ -249,7 +283,7 @@
                     <h2 class="text-3xl font-black tracking-tight">Revenue</h2>
                     <p class="text-sm">Distribution of revenue across product categories</p>
                     <span>
-                        <div id="piechart" class="w-full h-[400px]"></div>
+                        <div id="revenue-piechart" class="w-full h-[400px]"></div>
                     </span>
                 </div>
 
@@ -257,7 +291,7 @@
                     <h2 class="text-3xl font-black tracking-tight">Category Performance</h2>
                     <p class="text-sm">Revenue comparison by category</p>
                     <span>
-                        <img src="assets/Graph.png" alt="Revenue comparison graph">
+                        <div id="revenue-bar-chart" class="w-100% h-[400px]"></div>
                     </span>
                 </div>
             </section>
