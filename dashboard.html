@@ -77,13 +77,19 @@
             chart.draw(data, options);
         }
     </script>
+
+    <!-- <style>
+        * {
+            outline: red solid 2px;
+        }
+    </style> -->
 </head>
 
 <body class="font-mono">
     <div class="flex min-h-screen">
         <input type="checkbox" name="" id="menu-toggle">
         <label for="menu-toggle" class="toggle-button">
-            
+
             <div class="toggle">
                 <span class="top-line common"></span>
                 <span class="middle-line common"></span>
@@ -94,11 +100,11 @@
             <div class="flex h-screen flex-col justify-between border-e border-gray-100">
                 <div class="px-4 py-6">
                     <h1 class="ml-[50px] text-white/90 text-2xl font-black tracking-tighter pointer-events-none">
-                        <span class="label">Vision Auto <span class="text-blue-700 text-3xl">.</span></span></h1>
+                        <span class="label">Vision Auto <span class="text-blue-700 text-3xl">.</span></span>
+                    </h1>
                     <ul class="mt-10 pt-4 space-y-1 flex flex-col gap-4">
                         <li>
-                            <a href="dashboard.html"
-                                class="rounded-lg text-sm text-white nav-link active">
+                            <a href="dashboard.html" class="rounded-lg text-sm text-white nav-link active">
                                 <i class="fa-regular fa-house" style="color: #ffffff;"></i>
                                 <span class="label"> Dashboard</span>
                             </a>
@@ -107,7 +113,8 @@
                             <details class="group [&amp;_summary::-webkit-details-marker]:hidden">
                                 <summary
                                     class="flex cursor-pointer items-center justify-between rounded-lg  text-white hover:bg-blue-900 nav-link">
-                                    <span class="text-sm font-medium nav-link"><i class="fa-solid fa-chart-column fa-lg" style="color: #ffffff;"></i> <span class="label">Analytics</span> </span>
+                                    <span class="text-sm font-medium nav-link"><i class="fa-solid fa-chart-column fa-lg"
+                                            style="color: #ffffff;"></i> <span class="label">Analytics</span> </span>
                                     <span class="shrink-0 transition duration-300 group-open:-rotate-180">
                                         <span class="label"><i class="fa-solid fa-chevron-down"></i></span>
                                     </span>
@@ -153,7 +160,8 @@
                     </div>
                     <div>
                         <a href="index.html" class="flex justify-end gap-4 px-4 py-2 text-red-600 hover:bg-red-900/30">
-                            <span class="label">Logout</span> <i class="fa-solid fa-right-from-bracket align-center"></i></a>
+                            <span class="label">Logout</span> <i
+                                class="fa-solid fa-right-from-bracket align-center"></i></a>
                     </div>
                 </div>
             </div>
@@ -182,8 +190,77 @@
 
                     </div>
                     <div class="flex gap-10 p-4">
-                        <i class="fa-regular fa-envelope fa-2xl"></i>
-                        <i class="fa-regular fa-bell fa-2xl"></i>
+
+                        <div>
+                            <a href="#message-modal"><i class="fa-regular fa-envelope fa-2xl"></i></a>
+                            <div id="message-modal" class="modal ">
+                                <div class="modal-content">
+                                    <h3 class="text-2xl font-black px-3 py-2 border-b border-gray-300">Messages</h3>
+
+                                    <div
+                                        class="flex gap-3 flex-col px-3 py-2 border-b border-gray-300 cursor-pointer hover:bg-blue-100 hover:scale-y-105 relative rounded-md ">
+                                        <span class="absolute top-3 right-3 w-3 h-3 bg-blue-600 rounded-full"></span>
+                                        <h4 class="font-bold text-md">Warehouse Manager</h4>
+                                        <p class="font-regular text-sm ">Inventory count for filters complete</p>
+                                        <p class="text-slate-700 text-xs">10 min ago</p>
+                                    </div>
+
+                                    <div
+                                        class="flex gap-3 flex-col px-3 py-2 border-b border-gray-300 cursor-pointer hover:bg-blue-100 hover:scale-y-105 relative rounded-md">
+                                        <span class="absolute top-3 right-3 w-3 h-3 bg-blue-600 rounded-full"></span>
+
+                                        <h4 class="font-bold text-md">Sales Team</h4>
+                                        <p class="font-regular text-sm ">Bulk order from AutoExpress need approval</p>
+                                        <p class="text-slate-700 text-xs">25 min ago</p>
+                                    </div>
+
+                                    <div class="text-center text-blue-600 py-2 bg-gray-100 rounded-md">
+                                        <a href="#">View All Messages</a>
+                                    </div>
+
+                                    <a href="#" class="modalclose">&times;</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div>
+                            <a href="#notification-modal"><i class="fa-regular fa-bell fa-2xl"></i></a>
+                            <div id="notification-modal" class="modal ">
+                                <div class="modal-content">
+                                    <h3 class="text-2xl font-black px-3 py-2 border-b border-gray-300">Notifications
+                                    </h3>
+
+
+                                    <div
+                                        class="flex gap-3 flex-col px-3 py-2 border-b border-gray-300 cursor-pointer hover:bg-blue-100 hover:scale-y-105 relative rounded-md">
+                                        <span class="absolute top-3 right-3 w-3 h-3 bg-blue-600 rounded-full"></span>
+                                        <h4 class="font-bold text-md">New Order Received</h4>
+                                        <p class="font-regular text-sm ">Order #ORD-4897 has been placed</p>
+                                        <p class="text-slate-700 text-xs">10 min ago</p>
+                                    </div>
+
+                                    <div
+                                        class="flex gap-3 flex-col px-3 py-2 border-b border-gray-300 cursor-pointer hover:bg-blue-100 hover:scale-y-105 relative rounded-md">
+                                        <span class="absolute top-3 right-3 w-3 h-3 bg-blue-600 rounded-full"></span>
+
+                                        <h4 class="font-bold text-md">Low Stock Alert</h4>
+                                        <p class="font-regular text-sm ">Brake pads inventory below threshold</p>
+                                        <p class="text-slate-700 text-xs">1 hour ago</p>
+                                    </div>
+
+                                    <div class="text-center text-blue-600 py-2 bg-gray-100 rounded-md">
+                                        <a href="#">View All Notifications</a>
+                                    </div>
+
+                                    <a href="#" class="modalclose">&times;</a>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
