@@ -12,52 +12,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sales Management | Vision Auto</title>
+    <title>Calendar | Vision Auto</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/ac82667efe.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="style.css">
     
 </head>
 
 <body class="font-mono">
     <div class="flex min-h-screen">
-        <aside class="fixed bg-slate-900 lg:w-64 md:w-48 w-40 h-screen">
+        <input type="checkbox" name="" id="menu-toggle">
+        <label for="menu-toggle" class="toggle-button">
+
+            <div class="toggle">
+                <span class="top-line common"></span>
+                <span class="middle-line common"></span>
+                <span class="bottom-line common"></span>
+            </div>
+        </label>
+        <aside class="fixed bg-slate-900 h-screen sidebar">
             <div class="flex h-screen flex-col justify-between border-e border-gray-100">
                 <div class="px-4 py-6">
-                    <h1 class="text-white/90 text-2xl font-black tracking-tighter">
-                        Vision Auto <span class="text-blue-700 text-3xl">.</span></h1>
+                    <h1 class="ml-[50px] text-white/90 text-2xl font-black tracking-tighter pointer-events-none">
+                        <span class="label">Vision Auto </span><span class="text-blue-700 text-3xl label">.</span>
+                    </h1>
                     <ul class="mt-10 pt-4 space-y-1 flex flex-col gap-4">
                         <li>
-                            <a href="dashboard.html"
-                                class="block rounded-lg  px-4 py-2 text-sm font-medium text-white hover:bg-blue-900">
-                                Dashboard
+                            <a href="dashboard.html" class="rounded-lg text-sm text-white nav-link hover:bg-blue-900">
+                                <i class="fa-regular fa-house fa-regular" style="color: #ffffff;"></i>
+                                <span class="label"> Dashboard</span>
                             </a>
                         </li>
+                        </li>
                         <li>
-                            <details class="group [&amp;_summary::-webkit-details-marker]:hidden" open="">
+                            <details class="group [&amp;_summary::-webkit-details-marker]:hidden">
                                 <summary
-                                    class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-white hover:bg-blue-900">
-                                    <span class="text-sm font-medium"> Calendar </span>
+                                    class="flex cursor-pointer items-center justify-between rounded-lg  text-white hover:bg-blue-900 nav-link">
+                                    <span class="text-sm font-medium nav-link"><i class="fa-solid fa-chart-column fa-lg" style="color: #ffffff;"></i> <span class="label">Analytics</span> </span>
                                     <span class="shrink-0 transition duration-300 group-open:-rotate-180">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 20 20"
-                                            fill="currentColor">
-                                            <path fill-rule="evenodd"
-                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                clip-rule="evenodd"></path>
-                                        </svg>
+                                        <span class="label"><i class="fa-solid fa-chevron-down"></i></span>
                                     </span>
                                 </summary>
                                 <ul class="mt-2 space-y-1 px-4">
                                     <li>
                                         <a href="order.html"
-                                            class="block rounded-lg  px-4 py-2 lg:text-sm text-xs font-medium text-white hover:bg-blue-900">
-                                            Order Management
+                                            class=" rounded-lg text-sm text-white hover:bg-blue-900 nav-link">
+                                            <i class="fa-solid fa-truck-fast fa-lg" style="color: #ffffff;"></i>
+                                            <span class="label ">Order Management</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="sales.html"
-                                            class="block rounded-lg  px-4 py-2 lg:text-sm text-xs font-medium text-white hover:bg-blue-900">
-                                            Sales Management
+                                            class="rounded-lg text-sm text-white hover:bg-blue-900 nav-link">
+                                            <i class="fa-solid fa-money-bills fa-lg" style="color: #ffffff;"></i>
+                                            <span class="label">Sales Management</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -65,8 +73,9 @@
                         </li>
                         <li>
                             <a href="calendar.html"
-                                class="block rounded-lg bg-blue-900 px-4 py-2 text-sm font-medium text-white">
-                                Calendar
+                                class=" rounded-lg font-medium text-white text-sm bg-blue-900 nav-link ">
+                                <i class="fa-regular fa-calendar fa-lg" style="color: #ffffff;"></i>
+                                <span class="label">Calendar</span>
                             </a>
                         </li>
                     </ul>
@@ -78,15 +87,15 @@
                             class="size-10 rounded-full object-cover">
                         <div>
                             <p class="text-white">
-                                <strong class="block font-bold text-lg">Isaac Ndungu</strong>
-                                <span class="font-medium text-xs"> Administrator</span>
+                                <strong class="block font-bold text-lg"><span class="label">Isaac Ndungu</span></strong>
+                                <span class="font-medium text-xs label"> Administrator</span>
                             </p>
                         </div>
                     </div>
 
                         <div>
                             <a href="index.html" class="flex justify-end gap-4 px-4 py-2 text-red-600 hover:bg-red-900/30">
-                                 Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+                                 <span class="label">Logout</span> <i class="fa-solid fa-right-from-bracket"></i></a>
                         </div>
                 </div>
             </div>
@@ -94,7 +103,7 @@
 
 
 
-        <main class="lg:ml-64 md:ml-48 ml-40 bg-gray-100 flex-1 px-6">
+        <main class=" bg-gray-100 flex-1 px-6">
             <header>
                 <div class="flex justify-between mb-6 pt-4 ">
                     <div>
